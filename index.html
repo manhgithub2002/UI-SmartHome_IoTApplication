@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IOT và ứng dụng</title>
+
+    <link rel="stylesheet" href="/css/test.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/table.css" />
+    <link rel="stylesheet" href="/css/profile.css" />
+    <link rel="stylesheet" href="/css/sb-admin-2.min.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <link
+      href="/vendor/fontawesome-free-6.4.2-web/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body id="page-top">
+    <div id="wrapper">
+      <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+          <div class="header-fixed">
+            <nav
+              class="navbar navbar-expand navbar-light bg-white topbar static-top shadow"
+            >
+              <a
+                class="sidebar-brand d-flex align-items-center justify-content-center"
+                href="index.html"
+              >
+                <div class="sidebar-brand-text mx-3" style="font-size: 24px">
+                  Smart Home
+                </div>
+              </a>
+
+              <!-- Topbar Navbar -->
+              <ul class="navbar-nav ml-auto">
+                <!-- Nav Item - User Information -->
+                <li class="nav-item dropdown no-arrow">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="userDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"
+                      >{{user.ten}}</span
+                    >
+                    <img
+                      class="img-profile rounded-circle"
+                      src="img/undraw_profile.svg"
+                    />
+                  </a>
+                  <!-- Dropdown - User Information -->
+                  <div
+                    class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                    aria-labelledby="userDropdown1"
+                  >
+                    <a class="dropdown-item" href="/profile.html">
+                      <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                      Profile
+                    </a>
+                    <a class="dropdown-item" href="actionHistory.html">
+                      <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                      Action History
+                    </a>
+                    <a class="dropdown-item" href="senserData.html">
+                      <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                      Sensor Data
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/logout">
+                      <i
+                        class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
+                      ></i>
+                      Logout
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div style="margin-top: 100px">
+            <div class="container-fluid" style="padding-top: 20px">
+              <!-- Content Row -->
+              <div class="row">
+                <!-- nhiệt độ -->
+                <div class="col-xl-4 mb-5">
+                  <div class="card border-top-danger shadow h-100 py-2">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div
+                            class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                          >
+                            Temperature (Nhiệt độ)
+                          </div>
+                          <div class="row no-gutters align-items-center">
+                            <div class="col-auto">
+                              <div
+                                class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
+                                id="temp"
+                              >
+                                28°C
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="progress progress-sm mr-2">
+                                <div
+                                  class="progress-bar bg-info1"
+                                  role="progressbar"
+                                  aria-valuenow="50"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <i
+                            class="fas fa-solid fa-temperature-low fa-2x text-gray-300"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- độ ẩm -->
+                <div class="col-xl-4 mb-5">
+                  <div class="card border-top-success shadow h-100 py-2">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div
+                            class="text-xs font-weight-bold text-success text-uppercase mb-1"
+                          >
+                            Humidity (Độ ẩm)
+                          </div>
+                          <div class="row no-gutters align-items-center">
+                            <div class="col-auto">
+                              <div
+                                class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
+                                id="hum"
+                              >
+                                80%
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="progress progress-sm mr-2">
+                                <div
+                                  class="progress-bar bg-info2"
+                                  role="progressbar"
+                                  aria-valuenow="50"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <i
+                            class="fas fa-solid fa-snowflake fa-2x text-gray-300"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ánh sáng -->
+                <div class="col-xl-4 mb-5">
+                  <div class="card border-top-warning shadow h-100 py-2">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div
+                            class="text-xs font-weight-bold text-info text-uppercase mb-1"
+                          >
+                            Light (Ánh sáng)
+                          </div>
+                          <div class="row no-gutters align-items-center">
+                            <div class="col-auto">
+                              <div
+                                class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
+                                id="light"
+                              >
+                                70 Lux
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="progress progress-sm mr-2">
+                                <div
+                                  class="progress-bar bg-info3"
+                                  role="progressbar"
+                                  aria-valuenow="50"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <i
+                            class="fas fa-solid fa-lightbulb fa-2x text-gray-300"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content Row -->
+
+              <div class="row">
+                <!-- Area Chart -->
+                <div class="col-xl-8">
+                  <div class="card shadow chart">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3">
+                      <h6 class="m-0 font-weight-bold text-primary">Chart</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <div class="chart-area">
+                        <canvas id="myAreaChart1"></canvas>
+                        <progress
+                          id="animationProgress"
+                          max="1"
+                          value="0"
+                          style="width: 100%"
+                        ></progress>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pie Chart -->
+                <div class="col-xl-4">
+                  <!-- Fan Control-->
+                  <div class="card shadow control-pan" id="fan">
+                    <div class="fan">
+                      <img src="img/fangrid.png" class="grid" />
+                      <div
+                        class="circle"
+                        style="background-image: url(img/fan.png)"
+                      ></div>
+                      <div class="bottom">
+                        <button
+                          type="button"
+                          class="btn btn-success btn-fan-on"
+                        >
+                          On
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-danger btn-fan-off"
+                          disabled
+                        >
+                          Off
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Light Control -->
+                  <div class="card shadow control-light" id="led1">
+                    <!-- <div class="led"> -->
+                    <img src="img/offLight.png" class="lamp" id="lamp" />
+                    <div class="bottom">
+                      <button type="button" class="btn btn-success btn-led-on">
+                        On
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-led-off"
+                        disabled
+                      >
+                        Off
+                      </button>
+                    </div>
+                    <!-- </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+
+  <script src="/util/chart-area-demo.js"></script>
+  <script src="/util/sb-admin-2.min.js"></script>
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
+  <script src="/util/style.js"></script>
+  <script src="/util/tbData.js"></script>
+</html>

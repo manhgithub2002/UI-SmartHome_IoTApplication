@@ -1,0 +1,50 @@
+h1 {
+  font-family: "Amarante", Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 3.6em;
+  line-height: 1.7em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#table {
+  display: block;
+  width: 1000px;
+  background: #fff;
+  margin: 50px auto 100px;
+  padding: 10px 17px;
+  border-radius: 12px;
+  -webkit-box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.35);
+}
+
+.wrapperr {
+  width: 100%;
+  min-height: 877px;
+  height: auto;
+  padding: 50px 20px;
+  padding-top: 0px;
+  display: flex;
+  background: linear-gradient(
+    90deg,
+    rgba(100, 145, 115, 1) 0%,
+    rgba(219, 213, 164, 1) 100%,
+    rgba(206, 208, 20, 1) 100%
+  );
+}
+
+.filter-form {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-item {
+  width: 300px;
+  margin: 0 auto;
+}
+.btn-filter {
+  color: #fff;
+  border-radius: 10px;
+  border: green 1px solid;
+  background-color: green;
+}
